@@ -57,6 +57,7 @@ namespace BookStore.Controllers
                 issuer: "https://localhost:7292",
                 audience: "https://localhost:7292",
                 claims: new List<Claim>(),
+                expires: DateTime.UtcNow.AddDays(2),
                 signingCredentials: signinCredentials
             );
             var tokenStr = new JwtSecurityTokenHandler().WriteToken(tokenOptions);
