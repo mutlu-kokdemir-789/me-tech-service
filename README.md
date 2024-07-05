@@ -1,7 +1,7 @@
 
 Backend:
 
-Backend tarafinda servis calistirilidiginda https://localhost:7292 uzerinden hizmet vermektedir.
+Backend tarafinda servis calistirilidiginda https://localhost:7292 uzerinden hizmet vermektedir. Eger url degistirilmek istenirse Program.cs de 27. vs 28. satirlarinda ve AuthController.cs de 57. vs 58. satirlarinda da degistirilmesi gerekmektedir.
 Servisi ayaga kaldirmak icin gereken adimlar:
   - 'me-tech-service/BookStore' dizinine gidin.
   - dotnet run ./BookStore  komutu ile ayaga kaldirilir.
