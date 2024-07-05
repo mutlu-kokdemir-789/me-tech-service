@@ -186,7 +186,7 @@ namespace BookStore.Controllers
 
 
         [HttpPost("Add"), Authorize]
-        public async Task<ActionResult<Book>> AddBook(Book book)
+        public async Task<ActionResult<Book>> AddBook(BookAddRequest book)
         {
             Guid id = Guid.NewGuid();
             Book bookToBeAdded = new Book();
@@ -257,7 +257,7 @@ namespace BookStore.Controllers
 
 
         [HttpPatch("Update"), Authorize]
-        public async Task<ActionResult<Book>> Update([FromBody] Book book)
+        public async Task<ActionResult<Book>> Update([FromBody] BookUpdateRequest book)
         {
             var bookFromDb = await _storeDbContext.Books.FindAsync(new Guid(book.Id.ToString()));
             if (bookFromDb != null)
