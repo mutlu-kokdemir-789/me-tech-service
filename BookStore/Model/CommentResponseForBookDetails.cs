@@ -2,16 +2,12 @@
 
 namespace BookStore.Model
 {
-    public class Comment
+    public class CommentResponseForBookDetails
     {
         [JsonConverter(typeof(GuidJsonConverter))]
         public Guid Id { get; set; }
 
-        [JsonConverter(typeof(GuidJsonConverter))]
-        public Guid UserId { get; set; }
-
-        [JsonConverter(typeof(GuidJsonConverter))]
-        public Guid BookId { get; set; }
+        public string UserName { get; set; }
 
         public string Message { get; set; }
     }

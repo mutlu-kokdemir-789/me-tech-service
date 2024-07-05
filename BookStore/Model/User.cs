@@ -1,7 +1,10 @@
-﻿namespace BookStore.Model
+﻿using System.Text.Json.Serialization;
+
+namespace BookStore.Model
 {
     public class User
     {
+        [JsonConverter(typeof(GuidJsonConverter))]
         public Guid Id { get; set; }
 
         public string Name { get; set; }
